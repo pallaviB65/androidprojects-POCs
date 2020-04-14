@@ -6,12 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
-import android.speech.SpeechRecognizer;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,50 +19,65 @@ import com.example.androidprojectpocs.R;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class SpeechToTextActivity extends AppCompatActivity implements RecognitionListener {
-
-    private TextView txtSpeechInput;
-    private ImageButton btnSpeak;
+public class CreateFromVoiceActivity extends AppCompatActivity {
+    private EditText titleET, boardET, descriptionET;
+    private TextView titleSpeaker, boardSpeaker;
+    private Button createBT;
     private final int REQ_CODE_SPEECH_INPUT = 100;
-
-    private SpeechRecognizer speech;
+    private Boolean titleB = false, boardB = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_speech_to_text);
+        setContentView(R.layout.activity_create_from_voice);
 
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
-        btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
+        titleET = findViewById(R.id.titleET);
+        boardET = findViewById(R.id.boardET);
+        descriptionET = findViewById(R.id.descriptionET);
+        titleSpeaker = findViewById(R.id.titleSpeaker);
+        boardSpeaker = findViewById(R.id.boardSpeaker);
+        createBT = findViewById(R.id.createBT);
 
-        speech = SpeechRecognizer.createSpeechRecognizer(this);
-        speech.setRecognitionListener(this);
-
-        btnSpeak.setOnClickListener(new View.OnClickListener() {
+        titleSpeaker.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                //promptSpeechInput();
-                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-                intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                        getString(R.string.speech_prompt));
+                promptSpeechInput();
+                titleB = true;
+                boardB = false;
+            }
+        });
 
-                try {
-                    startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
-                } catch (ActivityNotFoundException a) {
-                    Toast.makeText(getApplicationContext(),
-                            getString(R.string.speech_not_supported),
-                            Toast.LENGTH_SHORT).show();
+        boardSpeaker.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                promptSpeechInput();
+                titleB = false;
+                boardB = true;
+            }
+        });
+
+        createBT.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(!titleET.getText().toString().isEmpty() &&  titleET.getText().toString().length() > 3 && !boardET.getText().toString().isEmpty() && boardET.getText().toString().length() > 3){
+                    Toast.makeText(CreateFromVoiceActivity.this, "Item created successfully", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(CreateFromVoiceActivity.this, DisplayCreatedItemActivity.class);
+                    i.putExtra("title", titleET.getText().toString());
+                    i.putExtra("board", boardET.getText().toString());
+                    i.putExtra("description", descriptionET.getText().toString());
+                    startActivity(i);
+                }else{
+                    Toast.makeText(CreateFromVoiceActivity.this, "Please fill title and board name", Toast.LENGTH_SHORT).show();
                 }
-                //speech.startListening(intent);
+
             }
         });
     }
@@ -83,6 +97,7 @@ public class SpeechToTextActivity extends AppCompatActivity implements Recogniti
                     Toast.LENGTH_SHORT).show();
         }
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -93,7 +108,12 @@ public class SpeechToTextActivity extends AppCompatActivity implements Recogniti
 
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    txtSpeechInput.setText(result.get(0));
+                    if(titleB){
+                        titleET.setText(result.get(0));
+                    }else{
+                        boardET.setText(result.get(0));
+                    }
+
                 }
                 break;
             }
@@ -107,52 +127,6 @@ public class SpeechToTextActivity extends AppCompatActivity implements Recogniti
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
-
     }
 
-    @Override
-    public void onReadyForSpeech(Bundle params) {
-
-    }
-
-    @Override
-    public void onBeginningOfSpeech() {
-
-    }
-
-    @Override
-    public void onRmsChanged(float rmsdB) {
-
-    }
-
-    @Override
-    public void onBufferReceived(byte[] buffer) {
-
-    }
-
-    @Override
-    public void onEndOfSpeech() {
-
-    }
-
-    @Override
-    public void onError(int error) {
-
-    }
-
-    @Override
-    public void onResults(Bundle data) {
-        ArrayList<String> matches = data.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-        txtSpeechInput.setText(matches.get(0));
-    }
-
-    @Override
-    public void onPartialResults(Bundle partialResults) {
-
-    }
-
-    @Override
-    public void onEvent(int eventType, Bundle params) {
-
-    }
 }

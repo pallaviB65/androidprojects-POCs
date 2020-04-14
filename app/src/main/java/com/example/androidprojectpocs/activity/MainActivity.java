@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.voiceRecognition:
-                        Intent i = new Intent(MainActivity.this, SpeechToTextActivity.class);
+                        Intent i = new Intent(MainActivity.this, CreateActivity.class);
                         startActivity(i);
                         break;
                     case R.id.callDialer:
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Google Indoor POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.widgets:
+                        Intent in = new Intent(MainActivity.this, SearchActivity.class);
+                        startActivity(in);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     default:

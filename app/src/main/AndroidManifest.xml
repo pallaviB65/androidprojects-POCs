@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidprojectpocs">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SpeechToTextActivity"></activity>
+        <activity android:name=".activity.CreateActivity"></activity>
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.DisplayCreatedItemActivity" />
+        <activity android:name=".activity.CreateFromVoiceActivity" />
+        <activity android:name=".activity.SpeechToTextActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
