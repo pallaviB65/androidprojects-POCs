@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidprojectpocs">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +14,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SpeechToTextActivity"></activity>
+        <activity android:name=".activity.androidofflinesupport.EmployeeActivity"></activity>
+        <activity android:name=".activity.calldialer.CallDialerActivity" />
+        <activity android:name=".activity.androidofflinesupport.LoginActivity"></activity>
+        <activity android:name=".activity.voicerecognition.CreateActivity" />
+        <activity android:name=".activity.voicerecognition.SearchActivity" />
+        <activity android:name=".activity.voicerecognition.DisplayCreatedItemActivity" />
+        <activity android:name=".activity.voicerecognition.CreateFromVoiceActivity" />
+        <activity android:name=".activity.voicerecognition.SpeechToTextActivity" />
+        <activity android:name=".activity.Reminder.activity.ReminderActivity"/>
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.Reminder.activity.AddingEventActivity"/>
+        <!--        <receiver android:name=".activity.Reminder.activity.utils.NotificationPublisher" />-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

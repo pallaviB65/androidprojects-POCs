@@ -11,6 +11,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.androidprojectpocs.R;
+import com.example.androidprojectpocs.activity.Reminder.activity.ReminderActivity;
+import com.example.androidprojectpocs.activity.calldialer.CallDialerActivity;
+import com.example.androidprojectpocs.activity.voicerecognition.CreateActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,14 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.voiceRecognition:
-                        Intent i = new Intent(MainActivity.this, SpeechToTextActivity.class);
+                        Intent i = new Intent(MainActivity.this, CreateActivity.class);
                         startActivity(i);
                         break;
                     case R.id.callDialer:
-                        Toast.makeText(MainActivity.this, "Call dialer POC", Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(MainActivity.this, CallDialerActivity.class);
+                        startActivity(in);
                         break;
                     case R.id.reminder:
-                        Toast.makeText(MainActivity.this, "Event reminder POC", Toast.LENGTH_SHORT).show();
+                       Intent intent = new Intent(MainActivity.this, ReminderActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.indoorMaps:
                         Toast.makeText(MainActivity.this, "Google Indoor POC", Toast.LENGTH_SHORT).show();
