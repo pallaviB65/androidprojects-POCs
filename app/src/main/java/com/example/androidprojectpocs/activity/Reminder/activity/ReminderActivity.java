@@ -250,9 +250,9 @@ public class ReminderActivity extends AppCompatActivity implements RecyclerViewC
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu item) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
+        inflater.inflate(R.menu.add, item);
         return true;
     }
 
@@ -262,7 +262,7 @@ public class ReminderActivity extends AppCompatActivity implements RecyclerViewC
             case android.R.id.home:
                 onBackPressed();
                 return true;
-            case R.id.menu_main_0:
+            case R.id.menu_add_1:
                 getResultsFromApi();
             default:
                 return super.onOptionsItemSelected(item);
