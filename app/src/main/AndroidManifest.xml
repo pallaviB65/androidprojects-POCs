@@ -14,6 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver android:name="activity.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.androidprojectpocs.activity.widgetshowdialog" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+        <activity android:name=".activity.EventListActivity"></activity>
         <activity android:name=".activity.androidofflinesupport.EmployeeActivity"></activity>
         <activity android:name=".activity.calldialer.CallDialerActivity" />
         <activity android:name=".activity.androidofflinesupport.LoginActivity"></activity>
@@ -34,6 +45,10 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".activity.WidgetDialogActivity"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>

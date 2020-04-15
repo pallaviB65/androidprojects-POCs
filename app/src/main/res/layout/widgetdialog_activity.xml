@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/cornerborders"
+    android:orientation="vertical">
+
+    <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/title2"
+                android:layout_alignParentTop="true"
+                android:paddingTop="20dp"
+                android:background="#c0c0c0"
+                android:layout_marginLeft="20dp"
+
+
+        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/description2"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="#c0c0c0"
+                android:layout_below="@+id/title2"
+                />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_below="@+id/description2"
+        android:text="Submit"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/cornerborders"
+        tools:ignore="NotSibling" />
+
+
+</RelativeLayout>
+

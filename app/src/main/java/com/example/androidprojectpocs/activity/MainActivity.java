@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Google Indoor POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.widgets:
+                        Intent intent1 = new Intent(MainActivity.this, EventListActivity.class);
+                        startActivity(intent1);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     default:
