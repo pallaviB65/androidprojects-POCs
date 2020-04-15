@@ -4,12 +4,6 @@ package com.example.androidprojectpocs.activity.Reminder.activity.utils;
 import com.example.androidprojectpocs.R;
 
 public class Constants {
-    public static final int EVENT_ANNIVERSARY = 1;
-    public static final int EVENT_EDUCATION = 2;
-    public static final int EVENT_JOB = 3;
-    public static final int EVENT_LIFE = 4;
-    public static final int EVENT_TRIP = 5;
-    public static final int EVENT_OTHER = 6;
 
     public static final int EVENT_STATE_WRITE = 0;
     public static final int EVENT_STATE_READ = 1;

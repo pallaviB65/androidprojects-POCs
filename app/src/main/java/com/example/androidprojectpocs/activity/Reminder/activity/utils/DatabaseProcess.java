@@ -65,8 +65,8 @@ public class DatabaseProcess {
         Events event =  new Events(
                 res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_ID))
                 , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_NAME))
-//                , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
-//                , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
+                , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
+                , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
                 , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_DATE))
                 , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_LOOP))
                 , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_IMAGE))
@@ -88,6 +88,8 @@ public class DatabaseProcess {
             Events event = new Events(
                     res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_ID))
                     , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_NAME))
+                    , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
+                    , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
                     , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_DATE))
                     , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_LOOP))
                     , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_IMAGE))
@@ -127,8 +129,8 @@ public class DatabaseProcess {
                     Events event = new Events(
                             res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_ID))
                             , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_NAME))
-//                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
-//                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
+                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
+                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
                             , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_DATE))
                             , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_LOOP))
                             , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_IMAGE))
@@ -151,8 +153,8 @@ public class DatabaseProcess {
                     Events event = new Events(
                             res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_ID))
                             , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_NAME))
-//                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
-//                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
+                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_ID))
+                            , res.getInt(res.getColumnIndex(Constants.KIND_COLUMN_COLOR))
                             , res.getString(res.getColumnIndex(Constants.EVENT_COLUMN_DATE))
                             , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_LOOP))
                             , res.getInt(res.getColumnIndex(Constants.EVENT_COLUMN_IMAGE))

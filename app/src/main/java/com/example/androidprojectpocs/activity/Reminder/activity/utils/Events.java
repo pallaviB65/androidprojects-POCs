@@ -31,12 +31,12 @@ public class Events {
     private String idSync;
     private int deleted;
 
-    public Events(int id, String name,  String date
+    public Events(int id, String name,int kind, int color,  String date
             , int loop, int img, int state, String idSync, int deleted) {
         this.id = id;
         this.name = name;
-//        this.kind = kind;
-//        this.color = color;
+        this.kind = kind;
+        this.color = color;
         this.date = date;
         this.loop = loop;
         this.img = img;
