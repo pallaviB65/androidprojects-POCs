@@ -11,13 +11,16 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.androidprojectpocs.R;
+import com.example.androidprojectpocs.activity.Reminder.activity.ReminderActivity;
 import com.google.android.material.navigation.NavigationView;
+import com.mikepenz.materialdrawer.Drawer;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle t;
     private NavigationView nv;
+    private Drawer result = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Call dialer POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.reminder:
-                        Toast.makeText(MainActivity.this, "Event reminder POC", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, ReminderActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.indoorMaps:
                         Toast.makeText(MainActivity.this, "Google Indoor POC", Toast.LENGTH_SHORT).show();
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.widgets:
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
+                        
                     default:
                         return true;
                 }

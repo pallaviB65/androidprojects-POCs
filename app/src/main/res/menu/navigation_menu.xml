@@ -17,4 +17,7 @@
         android:icon="@drawable/ic_widgets"
         android:title="Customisable widgets"/>
 
+    <item android:id="@+id/sync"
+        android:icon="@drawable/ic_widgets"
+        android:title="Customisable widgets"/>
 </menu>
