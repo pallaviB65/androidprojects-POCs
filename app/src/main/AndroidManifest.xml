@@ -3,6 +3,8 @@
     package="com.example.androidprojectpocs">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -11,11 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.CreateActivity"></activity>
-        <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".activity.DisplayCreatedItemActivity" />
-        <activity android:name=".activity.CreateFromVoiceActivity" />
-        <activity android:name=".activity.SpeechToTextActivity" />
+        <activity android:name=".activity.calldialer.CallDialerActivity"></activity>
+
+        <activity android:name=".activity.voicerecognition.CreateActivity" />
+        <activity android:name=".activity.voicerecognition.SearchActivity" />
+        <activity android:name=".activity.voicerecognition.DisplayCreatedItemActivity" />
+        <activity android:name=".activity.voicerecognition.CreateFromVoiceActivity" />
+        <activity android:name=".activity.voicerecognition.SpeechToTextActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

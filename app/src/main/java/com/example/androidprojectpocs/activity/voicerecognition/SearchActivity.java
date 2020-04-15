@@ -1,4 +1,4 @@
-package com.example.androidprojectpocs.activity;
+package com.example.androidprojectpocs.activity.voicerecognition;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;

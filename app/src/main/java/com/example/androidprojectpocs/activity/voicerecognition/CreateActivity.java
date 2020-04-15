@@ -1,4 +1,4 @@
-package com.example.androidprojectpocs.activity;
+package com.example.androidprojectpocs.activity.voicerecognition;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -123,61 +123,6 @@ public class CreateActivity extends AppCompatActivity {
             }
         });
 
-       /* mSpeechRecognizer2.setRecognitionListener(new RecognitionListener() {
-            @Override
-            public void onReadyForSpeech(Bundle bundle) {
-
-            }
-
-            @Override
-            public void onBeginningOfSpeech() {
-
-            }
-
-            @Override
-            public void onRmsChanged(float v) {
-
-            }
-
-            @Override
-            public void onBufferReceived(byte[] bytes) {
-
-            }
-
-            @Override
-            public void onEndOfSpeech() {
-
-            }
-
-            @Override
-            public void onError(int i) {
-
-            }
-
-            @Override
-            public void onResults(Bundle bundle) {
-                //getting all the matches
-                ArrayList<String> matches = bundle
-                        .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-
-                //displaying the first match
-                if (matches != null){
-                    boardET.setText(matches.get(0));
-                }
-
-            }
-
-            @Override
-            public void onPartialResults(Bundle bundle) {
-
-            }
-
-            @Override
-            public void onEvent(int i, Bundle bundle) {
-
-            }
-        });*/
-
         titleSpeaker.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -219,29 +164,6 @@ public class CreateActivity extends AppCompatActivity {
                 return false;
             }
         });
-       /* titleSpeaker.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
-                titleET.setText("");
-                titleET.setHint("Listening...");
-                titleB = true;
-                boardB = false;
-            }
-        });
-
-        boardSpeaker.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
-                boardET.setText("");
-                boardET.setHint("Listening...");
-                titleB = false;
-                boardB = true;
-            }
-        });*/
 
         createBT.setOnClickListener(new View.OnClickListener() {
 

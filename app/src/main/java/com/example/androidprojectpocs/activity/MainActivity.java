@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.androidprojectpocs.R;
+import com.example.androidprojectpocs.activity.calldialer.CallDialerActivity;
+import com.example.androidprojectpocs.activity.voicerecognition.CreateActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.callDialer:
-                        Toast.makeText(MainActivity.this, "Call dialer POC", Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(MainActivity.this, CallDialerActivity.class);
+                        startActivity(in);
                         break;
                     case R.id.reminder:
                         Toast.makeText(MainActivity.this, "Event reminder POC", Toast.LENGTH_SHORT).show();
@@ -53,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Google Indoor POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.widgets:
-                        Intent in = new Intent(MainActivity.this, SearchActivity.class);
-                        startActivity(in);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     default:
