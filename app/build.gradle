@@ -10,7 +10,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -61,7 +61,7 @@ dependencies {
     implementation 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
     implementation 'pub.devrel:easypermissions:0.1.5'
     implementation 'com.google.code.gson:gson:2.6.1'
-
+    implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
