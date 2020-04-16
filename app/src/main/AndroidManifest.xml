@@ -33,6 +33,8 @@
         <activity android:name=".activity.voicerecognition.CreateFromVoiceActivity" />
         <activity android:name=".activity.voicerecognition.SpeechToTextActivity" />
         <activity android:name=".activity.Reminder.activity.ReminderActivity"/>
+        <activity android:name=".activity.MultiLanguageActivity"/>
+        <activity android:name=".activity.SecondActivity"/>
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

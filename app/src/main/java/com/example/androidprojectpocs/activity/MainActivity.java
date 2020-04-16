@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
                         //launch your activity from here
                         Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
                         startActivity(intent2);
+
+                    case R.id.direction:
+                        //launch your activity from here
+                        Intent intent3 = new Intent(MainActivity.this, EventListActivity.class);
+                        startActivity(intent3);
                     default:
                         return true;
                 }

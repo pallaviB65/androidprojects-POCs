@@ -17,15 +17,15 @@
         android:icon="@drawable/ic_widgets"
         android:title="Customisable widgets"/>
 
-    <item android:id="@+id/sync"
-        android:icon="@drawable/ic_widgets"
-        android:title="Customisable widgets"/>
-
-    <item android:id="@+id/multiLanguage"
+       <item android:id="@+id/multiLanguage"
         android:icon="@drawable/ic_widgets"
         android:title="Multi Language"/>
 
     <item android:id="@+id/gestures"
         android:icon="@drawable/ic_pan_tool"
         android:title="Gestures"/>
+
+    <item android:id="@+id/direction"
+        android:icon="@drawable/ic_direction"
+        android:title="Direction"/>
 </menu>
