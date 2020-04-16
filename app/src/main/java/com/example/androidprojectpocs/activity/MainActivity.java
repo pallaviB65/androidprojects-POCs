@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
+                    case R.id.gestures:
+                        //launch your activity from here
+                        Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
+                        startActivity(intent2);
                     default:
                         return true;
                 }
