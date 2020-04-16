@@ -24,11 +24,9 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
-        </receiver>
+        </receiver>buil
         <activity android:name=".activity.EventListActivity"></activity>
-        <activity android:name=".activity.androidofflinesupport.EmployeeActivity"></activity>
         <activity android:name=".activity.calldialer.CallDialerActivity" />
-        <activity android:name=".activity.androidofflinesupport.LoginActivity"></activity>
         <activity android:name=".activity.voicerecognition.CreateActivity" />
         <activity android:name=".activity.voicerecognition.SearchActivity" />
         <activity android:name=".activity.voicerecognition.DisplayCreatedItemActivity" />

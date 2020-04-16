@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
+                    case R.id.multiLanguage:
+                        Intent newIntent = new Intent(MainActivity.this, MultiLanguageActivity.class);
+                        startActivity(newIntent);
+                        break;
                     default:
                         return true;
                 }

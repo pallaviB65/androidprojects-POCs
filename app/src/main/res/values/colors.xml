@@ -41,4 +41,8 @@
     <color name="accent_pressed">#C2185B</color>
     <color name="ripple">#F06292</color>
     <color name="pink_reduced">#F06292</color>
+
+    <color name="bg_gradient_start_new">#00BDB0</color>
+    <color name="bg_gradient_end_new">#820d2a</color>
+    <color name="bg_button_login">#336167</color>
 </resources>

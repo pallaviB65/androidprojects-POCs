@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">एंड्रॉयड परियोजना</string>
+
+    <string name="action_settings">समायोजन</string>
+    <string name="welcome">स्वागतम</string>
+    <string name="email">ईमेल पता</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉगिन</string>
+    <string name="signup">खाता नहीं है? साइन अप करें</string>
+
+    <string name="hello">नमस्कार\nपरियोजना काम कर रहा है|</string>
+
+    <string name="hello_world">नमस्ते दुनिया!</string>
+    <string name="speech_prompt">तुम कुछ तो बोलो&#8230;</string>
+    <string name="speech_not_supported">माफ़ करना! आपका उपकरण भाषण इनपुट का समर्थन नहीं करता है</string>
+    <string name="tap_on_mic">बोलने के लिए माइक पर टैप करें</string>
+    <string name="open">खुला हुआ</string>
+    <string name="close">बंद करे</string>
+    <string name="appwidget_text">उदाहरण</string>
+    <string name="add_widget">िजेट जोड़ें</string>
+
+</resources>
