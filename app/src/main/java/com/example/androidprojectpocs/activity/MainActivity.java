@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent newIntent = new Intent(MainActivity.this, MultiLanguageActivity.class);
                         startActivity(newIntent);
                         break;
+                    case R.id.gestures:
+                        //launch your activity from here
+                        Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
+                        startActivity(intent2);
                     default:
                         return true;
                 }
