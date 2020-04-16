@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.androidprojectpocs.R;
+import com.example.androidprojectpocs.activity.MainActivity;
 import com.example.androidprojectpocs.activity.Reminder.activity.adapter.RecyclerAdapter;
 import com.example.androidprojectpocs.activity.Reminder.activity.item.RecyclerItemClickListener;
 import com.example.androidprojectpocs.activity.Reminder.activity.item.RecyclerViewClickListener;
@@ -271,9 +272,10 @@ public class ReminderActivity extends AppCompatActivity implements RecyclerViewC
 
     @Override
     public void onBackPressed() {
-
-            super.onBackPressed();
+        Intent intent = new Intent(ReminderActivity.this, MainActivity.class);
+        startActivity(intent);
     }
+
 
     public void getResultsFromApi() {
         if (!isGooglePlayServicesAvailable()) {
