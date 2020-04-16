@@ -21,15 +21,13 @@
             android:background="@drawable/cornerborders"
             >
             <Button
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:id="@+id/btnPin"
                 android:layout_alignRight="@+id/contentView"
                 android:layout_marginRight="5dp"
-                android:layout_toRightOf="@+id/title"
                 android:text="Pin"
-                android:layout_alignBottom="@+id/title"
-                android:layout_alignTop="@+id/title"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
                 android:layout_alignParentRight="true"
                 tools:ignore="NotSibling" />
@@ -40,7 +38,8 @@
                 android:text="Android training"
                 android:id="@+id/title"
                 android:layout_alignParentTop="true"
-                android:paddingTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
 
                 />
@@ -48,10 +47,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="details of training"
+                android:text="Details of training"
+                android:textSize="18sp"
                 android:id="@+id/description"
                 android:layout_marginTop="15dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/title"
                 />
