@@ -24,6 +24,7 @@
     <item android:id="@+id/multiLanguage"
         android:icon="@drawable/ic_widgets"
         android:title="Multi Language"/>
+
     <item android:id="@+id/gestures"
         android:icon="@drawable/ic_pan_tool"
         android:title="Gestures"/>
