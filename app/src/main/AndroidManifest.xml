@@ -2,12 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidprojectpocs">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.DarkModeActivity"></activity>
+
+        <activity android:name=".activity.EventListActivity" />
+
+        <activity android:name=".activity.calldialer.CallDialerActivity" />
+        <activity android:name=".activity.voicerecognition.CreateActivity" />
+        <activity android:name=".activity.voicerecognition.SearchActivity" />
+        <activity android:name=".activity.voicerecognition.DisplayCreatedItemActivity" />
+        <activity android:name=".activity.voicerecognition.CreateFromVoiceActivity" />
+        <activity android:name=".activity.voicerecognition.SpeechToTextActivity" />
+        <activity android:name=".activity.Reminder.activity.ReminderActivity" />
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Reminder.activity.AddingEventActivity" />
+        <activity
+            android:name=".activity.WidgetDialogActivity"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Dialog" /> <!-- <receiver android:name=".activity.Reminder.activity.utils.NotificationPublisher" /> -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <receiver android:name="activity.NewAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -24,30 +45,13 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
-        </receiver>buil
-        <activity android:name=".activity.EventListActivity"></activity>
-        <activity android:name=".activity.calldialer.CallDialerActivity" />
-        <activity android:name=".activity.voicerecognition.CreateActivity" />
-        <activity android:name=".activity.voicerecognition.SearchActivity" />
-        <activity android:name=".activity.voicerecognition.DisplayCreatedItemActivity" />
-        <activity android:name=".activity.voicerecognition.CreateFromVoiceActivity" />
-        <activity android:name=".activity.voicerecognition.SpeechToTextActivity" />
-        <activity android:name=".activity.Reminder.activity.ReminderActivity"/>
-        <activity android:name=".activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.Reminder.activity.AddingEventActivity"/>
-        <!--        <receiver android:name=".activity.Reminder.activity.utils.NotificationPublisher" />-->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <activity
-            android:name=".activity.WidgetDialogActivity"
-            android:noHistory="true"
-            android:theme="@android:style/Theme.Dialog" />
+        </receiver>
     </application>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

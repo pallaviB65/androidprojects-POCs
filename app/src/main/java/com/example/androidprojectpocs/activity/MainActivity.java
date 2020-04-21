@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.widgets:
                         Intent intent1 = new Intent(MainActivity.this, EventListActivity.class);
                         startActivity(intent1);
+                        break;
+                    case R.id.darkmode:
+                        Intent darkintent = new Intent(MainActivity.this, DarkModeActivity.class);
+                        startActivity(darkintent);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.multiLanguage:

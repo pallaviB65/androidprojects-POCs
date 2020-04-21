@@ -17,9 +17,9 @@
         android:icon="@drawable/ic_widgets"
         android:title="Customisable widgets"/>
 
-    <item android:id="@+id/sync"
-        android:icon="@drawable/ic_widgets"
-        android:title="Customisable widgets"/>
+    <item android:id="@+id/darkmode"
+        android:icon="@drawable/dark_mode"
+        android:title="Dark Mode"/>
 
     <item android:id="@+id/multiLanguage"
         android:icon="@drawable/ic_widgets"
