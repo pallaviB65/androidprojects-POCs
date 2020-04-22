@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.widgets:
                         Intent intent1 = new Intent(MainActivity.this, EventListActivity.class);
                         startActivity(intent1);
+                        break;
+                    case R.id.darkmode:
+                        Intent darkintent = new Intent(MainActivity.this, DarkModeActivity.class);
+                        startActivity(darkintent);
                         Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.multiLanguage:
@@ -70,11 +74,10 @@ public class MainActivity extends AppCompatActivity {
                         //launch your activity from here
                         Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
                         startActivity(intent2);
-
-                    case R.id.direction:
+                    case R.id.splitScreen:
                         //launch your activity from here
-                        Intent intent3 = new Intent(MainActivity.this, EventListActivity.class);
-                        startActivity(intent3);
+                        Intent splitScreenIntent = new Intent(MainActivity.this, SplitScreenActivity.class);
+                        startActivity(splitScreenIntent);
                     default:
                         return true;
                 }
