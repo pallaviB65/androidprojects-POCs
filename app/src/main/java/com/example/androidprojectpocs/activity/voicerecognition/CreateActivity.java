@@ -1,6 +1,7 @@
 package com.example.androidprojectpocs.activity.voicerecognition;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -19,7 +20,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.androidprojectpocs.R;
@@ -29,7 +29,7 @@ import java.util.Locale;
 
 public class CreateActivity extends AppCompatActivity {
     private EditText titleET, boardET, descriptionET;
-    private TextView titleSpeaker, boardSpeaker;
+    private Button titleSpeaker, boardSpeaker;
     private Button createBT;
     private Boolean titleB = false, boardB = false;
 
@@ -124,18 +124,22 @@ public class CreateActivity extends AppCompatActivity {
         });
 
         titleSpeaker.setOnTouchListener(new View.OnTouchListener() {
+           // @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_UP:
                         mSpeechRecognizer1.stopListening();
                         titleET.setHint("You will see input here");
+                        titleSpeaker.setBackground(getResources().getDrawable(R.drawable.ic_keyboard_voice_black));
+
                         break;
 
                     case MotionEvent.ACTION_DOWN:
                         mSpeechRecognizer1.startListening(mSpeechRecognizerIntent);
                         titleET.setText("");
                         titleET.setHint("Listening...");
+                       titleSpeaker.setBackground(getResources().getDrawable(R.drawable.ic_voice_blue));
                         titleB = true;
                         boardB = false;
                         break;
@@ -151,12 +155,14 @@ public class CreateActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_UP:
                         mSpeechRecognizer1.stopListening();
                         boardET.setHint("You will see input here");
+                        boardSpeaker.setBackground(getResources().getDrawable(R.drawable.ic_keyboard_voice_black));
                         break;
 
                     case MotionEvent.ACTION_DOWN:
                         mSpeechRecognizer1.startListening(mSpeechRecognizerIntent);
                         boardET.setText("");
                         boardET.setHint("Listening...");
+                        boardSpeaker.setBackground(getResources().getDrawable(R.drawable.ic_voice_blue));
                         titleB = false;
                         boardB = true;
                         break;

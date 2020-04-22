@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.darkmode:
                         Intent darkintent = new Intent(MainActivity.this, DarkModeActivity.class);
                         startActivity(darkintent);
-                        Toast.makeText(MainActivity.this, "Customisable widgets POC", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.multiLanguage:
                         Intent newIntent = new Intent(MainActivity.this, MultiLanguageActivity.class);
@@ -72,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.gestures:
                         //launch your activity from here
-                        Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
-                        startActivity(intent2);
+                        Toast.makeText(MainActivity.this, "Gestures POC", Toast.LENGTH_SHORT).show();
                     case R.id.splitScreen:
                         //launch your activity from here
                         Intent splitScreenIntent = new Intent(MainActivity.this, SplitScreenActivity.class);
