@@ -22,10 +22,14 @@
         android:title="Dark Mode"/>
 
     <item android:id="@+id/multiLanguage"
-        android:icon="@drawable/ic_widgets"
-        android:title="Multi Language"/>
+        android:icon="@drawable/ic_language"
+        android:title="Multi Language Support"/>
 
     <item android:id="@+id/gestures"
         android:icon="@drawable/ic_pan_tool"
         android:title="Gestures"/>
+
+    <item android:id="@+id/splitScreen"
+        android:icon="@drawable/ic_split_screen_24dp"
+        android:title="Split screen layout"/>
 </menu>

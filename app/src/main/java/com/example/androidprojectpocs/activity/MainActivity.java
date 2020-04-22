@@ -74,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                         //launch your activity from here
                         Intent intent2 = new Intent(MainActivity.this, EventListActivity.class);
                         startActivity(intent2);
+                    case R.id.splitScreen:
+                        //launch your activity from here
+                        Intent splitScreenIntent = new Intent(MainActivity.this, SplitScreenActivity.class);
+                        startActivity(splitScreenIntent);
                     default:
                         return true;
                 }

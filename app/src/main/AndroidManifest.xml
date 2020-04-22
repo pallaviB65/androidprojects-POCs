@@ -28,6 +28,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.Reminder.activity.AddingEventActivity" />
+        <activity android:name=".activity.SplitScreenActivity" />
+        <activity android:name=".activity.SecondSplitScreenActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize|orientation">
+            <layout
+                android:minHeight ="450dp"
+                android:minWidth ="300dp" />
+        </activity>
         <activity
             android:name=".activity.WidgetDialogActivity"
             android:noHistory="true"
